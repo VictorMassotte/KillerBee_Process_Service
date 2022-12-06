@@ -24,7 +24,6 @@ class process {
 
     async addProcess(req, res) {
         try {
-          console.log(req.body);
             const output = await processMySQL.addProcess(req.body);
             res.send(output);
         }
