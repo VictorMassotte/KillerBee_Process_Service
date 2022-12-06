@@ -11,7 +11,7 @@ class processMSSql {
 
     async getProcessById(id){
         const con = await mssqlcon.getConnection();
-        const res = await con.request().input('id', id).query('SELECT * FROM db_users WHERE id = @id');
+        const res = await con.request().input('id', id).query('SELECT * FROM process WHERE id = @id');
         return res.recordset;
     }
 
